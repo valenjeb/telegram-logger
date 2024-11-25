@@ -1,0 +1,33 @@
+{
+    "name": "devly/telegram-logger",
+    "description": "A Telegram-based logging system for PHP applications",
+    "type": "library",
+    "require": {
+        "php": ">=7.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0",
+        "mockery/mockery": "^1.5",
+        "devly/coding-standard": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Devly\\TelegramLogger\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Devly\\TelegramLogger\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    },
+    "scripts": {
+        "lint": "phpcs --standard=./phpcs.xml",
+        "lint:fix": "phpcbf --standard=./phpcs.xml",
+        "test": "phpunit"
+    }
+}
